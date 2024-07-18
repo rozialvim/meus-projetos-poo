@@ -1,6 +1,6 @@
 public class TestarMetodo{
     public static void main(String[]args){
-        String = "Rozi";
+        String nome = "Rozi";
         imprimirNome(nome);
   }
     public static void imprimirNome(String nome){
