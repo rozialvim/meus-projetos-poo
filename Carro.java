@@ -4,17 +4,17 @@ public class Carro {
         Scanner scanner = new Scanner(System.in);
         string  marca, modelo, cor;
         int velocAtual = 0;
-        int opcao =1;
-        System.out.println("Digite a marca do carro");
-        marca = scanner.nextLine();
+        int opcao = 1;
+        System.out.println("Digite a marca do automóvel.");
+        marca = scanner.next();
 
-        System.out.println("Digite o modelo do carro");
-        modelo = scanner.nextLine();
+        System.out.println("Digite o modelo do automóvel");
+        modelo = scanner.next();
 
-        System.out.println("Digite a cor do carro");
-        cor = scanner.nextLine();
+        System.out.println("Digite a cor do automóvel");
+        cor = scanner.next();
 
-         while (opcao != 3){
+        while (opcao != 3){
             System.out.println("Automóvel: 001");
             System.out.println("Marca: " + marca);
             System.out.println(" Modelo; " + modelo); 
@@ -27,22 +27,23 @@ public class Carro {
             System.out.println("3 - Sair");
             System.out.println("Dgite uma opção");
             opcao = scanner.nextInt();
-         } 
+        } 
 
-        Switch (opcao):
-        case 1: velocAtual = acelerar(velocAtual);
-        break;
+            Switch (opcao):
 
-        case 2: velocAtual = frear(velocAtual);
-        break;
+            case 1: velocAtual = acelerar(velocAtual);
+            break;
+
+            case 2: velocAtual = frear(velocAtual);
+            break;
         
-        case 3: sair();
-        break;
+            case 3: sair();
+            break;
 
-        default: System.out.println("opção digitada está incorreta");
+            default: System.out.println("opção digitada está incorreta");
         
         }
-        scanner.close();
+      scanner.close();
     
     public static int acelerar (int velocAtual){
         velocAtual = velocAtual + 10;
