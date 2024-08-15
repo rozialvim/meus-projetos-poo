@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-importjava.util.Scanner;
+
 public class CalculadoraGeometria {
     public static void main(String[]args){
-        Scanner scanner = new scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int menu = 0; 
 
         while (menu== 0) {
@@ -15,21 +15,52 @@ public class CalculadoraGeometria {
             System.out.println("\n->");
             menu = scanner.nextInt();
             switch (menu) {
-                case 1: círculo();
+                case 1: circulo();
                         break;
-                case 2: retângulo();
+                case 2: retangulo();
                         break;
-                case 3: triângulo();
+                case 3: triangulo();
                         break;
-                
+                case 4: menu++;
+                        break;
             
                 default:
-                    break;
+                System.out.println("Digite uma opção correta...\n");
+                        break;
             }
-
+            scanner.close();
 
             
         }
     }
-    
+    public static void circulo(){
+        System.out.print("Digite o valor do raio: ");
+        Scanner scanner = new Scanner(System.in);
+        double raio = scanner.nextDouble();
+        scanner.close();
+        double resultadoCirculo = Math.PI*(raio*raio);
+        System.out.println(resultadoCirculo);
+    }
+    public static void retangulo(){
+        System.out.print("Digite a altura: ");
+        Scanner scanner = new Scanner(System.in);
+        double altura = scanner.nextDouble();
+        System.out.print("Digite a largura: ");
+        double largura = scanner.nextDouble();
+        scanner.close();
+        double resultadoRetangulo = altura*largura;
+        System.out.println(resultadoRetangulo);
+    }
+    public static void triangulo(){
+        System.out.print("Digite o tamanho da base do triangulo; ");
+        Scanner scanner = new Scanner(System.in);
+        double base = scanner.nextDouble();
+        System.out.println("Digite a altura: ");
+        double altura = scanner.nextDouble();
+        double resultadoTriangulo =(base*altura)/2;
+        System.out.println(resultadoTriangulo);
+        scanner.close();                                
+    }
+
+        
 }
