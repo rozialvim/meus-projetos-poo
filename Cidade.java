@@ -7,7 +7,7 @@ public class Cidade {
         Scanner scanner=new Scanner(System.in);
        
         menu(opcaoCidade) {
-            System.out.println("Selecione a cidade que quer saber a temperatura: ")
+            System.out.println("Selecione a cidade que quer saber a temperatura: ");
             System.out.println(" 1- Bangkok:");
             System.out.println(" 2- Dubai:");
             System.out.println(" 3- São Paulo:");
@@ -23,8 +23,8 @@ public class Cidade {
             opcaoCidade = scanner.nextInt();
             scanner.close();
         }
-            switch (opcao) {
-                case 1:nomeCidade = "Bangkok";
+            switch(opcao){
+                case 1: nomeCidade = "Bangkok";
                     break;
                 case 2: nomeCidade = "Dubai";
                     break;
@@ -47,5 +47,7 @@ public class Cidade {
                 default:
                     break;
             }
+            resultadoTemp = temperatura.verificarTemp(opcaoCidade);
+            System.out.println("A temperatura é + resultado");
     }
 }
