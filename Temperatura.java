@@ -1,36 +1,36 @@
 
 public class Temperatura {   
-   int resultadoTemp;
-   public int verificarTemp(int opcaoCidade){
-      Switch(opcaoCidade){
-         case 1 =
+   public int TemperaturaAtual(int opcaoCidade ){
+      int resultadoTemp=0;
+      switch (opcaoCidade){
+         case 1:
          resultadoTemp = 28;
          break;
-         case 2 =
+         case 2:
          resultadoTemp = 27;
          break;
-         case 3 =
+         case 3:
          resultadoTemp = 19;
          break;
-         case 4 =
+         case 4:
          resultadoTemp = 12;
          break;
-         case 5 =
+         case 5:
          resultadoTemp = 18;
          break;
-         case 6 =
+         case 6:
          resultadoTemp = 11;
          break;
-         case 7 =
+         case 7:
          resultadoTemp = 5;
          break;
-         case 8 =
+         case 8:
          resultadoTemp = 16;
          break;
-         case 9 =
+         case 9:
          resultadoTemp = 16;
          break;
-         case 10 =
+         case 10:
          resultadoTemp = 22;
          break;
       }

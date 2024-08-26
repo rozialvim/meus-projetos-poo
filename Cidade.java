@@ -2,12 +2,18 @@ import java.util.Scanner;
 public class Cidade {
     public static void main(String[]args){
         Temperatura temperatura = new Temperatura();
-        int opcaoCidade, resultadoTemp;
-        String nomeCidade;
-        Scanner scanner=new Scanner(System.in);
-       
-        menu(opcaoCidade) {
-            System.out.println("Selecione a cidade que quer saber a temperatura: ");
+        int resultadoTemp = 0, opcaoCidade = 0;
+        String nomeCidade = "";
+        Scanner scanner =new Scanner(System.in);
+        menu(opcaoCidade);
+        opcaoCidade = scanner.nextInt();
+        nomeCidade = nomeCidade(opcaoCidade);
+        resultadoTemp = temperatura.TemperaturaAtual(opcaoCidade);
+        scanner.close();
+        System.out.println("A temperatura de " + nomeCidade + " é: " + resultadoTemp);
+    }
+        public static void menu(int opcaoCidade) {
+            System.out.println("Selecione a cidade que quer saber a temperatura:");
             System.out.println(" 1- Bangkok:");
             System.out.println(" 2- Dubai:");
             System.out.println(" 3- São Paulo:");
@@ -15,15 +21,14 @@ public class Cidade {
             System.out.println(" 5- Sydney:");
             System.out.println(" 6- Londres:");
             System.out.println(" 7- Moscou:");
-            System.out.println(" 8- Cidade do México:");
+            System.out.println(" 8- México:");
             System.out.println(" 9- Toquio:");
             System.out.println(" 10- Cairo:");
-
             System.out.println("Digite a opcao: ");
-            opcaoCidade = scanner.nextInt();
-            scanner.close();
         }
-            switch(opcao){
+        public static String nomeCidade(int opcaoCidade) {
+            String nomeCidade = "";
+            switch(opcaoCidade) {
                 case 1: nomeCidade = "Bangkok";
                     break;
                 case 2: nomeCidade = "Dubai";
@@ -38,16 +43,15 @@ public class Cidade {
                     break;
                 case 7: nomeCidade = "Moscou";
                     break;
-                case 8: nomeCidade = "Cidade do México";
+                case 8: nomeCidade = "México";
                     break;
                 case 9: nomeCidade = "Tóquio";
                     break;
-                case 3: nomeCidade = "Cairo";
+                case 10: nomeCidade = "Cairo";
                     break;
-                default:
-                    break;
+                default: System.out.println("Selecione a opção correta: ");
+                break;
             }
-            resultadoTemp = temperatura.verificarTemp(opcaoCidade);
-            System.out.println("A temperatura é + resultado");
+            return nomeCidade;
     }
 }
