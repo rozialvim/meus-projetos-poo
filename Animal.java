@@ -1,4 +1,4 @@
-public class Animal {
+public class Animal{
     String nome, especie,cor;
     int idade; 
 public void  exibirDados(){
