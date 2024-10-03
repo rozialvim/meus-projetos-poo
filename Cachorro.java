@@ -5,7 +5,7 @@ static Scanner scanner = new Scanner(System.in);
 public static void main(String[]args){
      String nome, raca, cor;
      int idade,opcao = 10;
-     float peso;-
+     float peso;
      System.out.println("CADASTRE SEU CACHORRO: ");
     System.out.println("Nome: ");
     nome = scanner.nextLine();
