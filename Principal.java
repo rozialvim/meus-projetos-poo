@@ -1,11 +1,11 @@
 public class Principal {
     public static void main (String[] args) {
-        Animal rex = new Animal();
-        rex.nome = "Rex";
-        rex.especie = "cachorro";
-        rex.cor = "caramelo";
-        rex.idade = 7;
-        rex.exibirDados();
+        Animal Rex = new Animal();
+        Rex.nome = "Rex";
+        Rex.especie = "cachorro";
+        Rex.cor = "caramelo";
+        Rex.idade = 7;
+        Rex.exibirDados();
 
         Animal Garfield = new Animal();
         Garfield.nome = "Garfield";
@@ -14,11 +14,11 @@ public class Principal {
         Garfield.idade = 2;
         Garfield.exibirDados();
 
-        Animal Frajola = new Animal();   
-        Frajola.nome = "Frajola";
-        Frajola.especie = "gato";
-        Frajola.cor = "preto e branco";
-        Frajola.idade = 3;
+        Animal Frajola = new Animal();
+        Frajola .nome = "Frajola";
+        Frajola .especie = "gato";
+        Frajola .cor = "preto e branco";
+        Frajola .idade = 3;
         Frajola.exibirDados();
 
         Animal Gloo = new Animal();
